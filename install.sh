@@ -2,17 +2,9 @@
 
 #install all linux packages useed
 #
-echo " Installing firefox obsidian alacritty htop npm neofetch neovim"
-sudo pacman -S --noconfirm firefox alacritty htop npm neofetch neovim
-
-echo " Installing python ripgrep stow"
-
-sudo pacman -S python ripgrep  stow
-
-sudo pacman -Sg nerd-fonts-ttf-victor-mono-nerd
-
-echo "Nerd Fonts installed correctly"
-
+echo " Installing default packages"
+sudo pacman -S --noconfirm firefox alacritty htop npm neofetch neovim python ripgrep stow ttf-jetbrains-mono-nerd
+echo "Package installation complete"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
@@ -25,7 +17,6 @@ for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
         --ignore=README.md --ignore=LICENSE 
     stow -t $HOME $folder
 done
-
 
 # Reload shell once installed
 echo "[+] Reloading shell..."
