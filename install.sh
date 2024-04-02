@@ -2,6 +2,7 @@
 
 #install all linux packages useed
 #
+sudo rm ~/.bashrc
 echo " Installing default packages"
 sudo pacman -S --noconfirm firefox alacritty htop npm neofetch neovim python ripgrep stow ttf-jetbrains-mono-nerd flameshot
 echo "Package installation complete"
