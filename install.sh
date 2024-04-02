@@ -3,7 +3,7 @@
 #install all linux packages useed
 #
 echo " Installing default packages"
-sudo pacman -S --noconfirm firefox alacritty htop npm neofetch neovim python ripgrep stow ttf-jetbrains-mono-nerd
+sudo pacman -S --noconfirm firefox alacritty htop npm neofetch neovim python ripgrep stow ttf-jetbrains-mono-nerd flameshot
 echo "Package installation complete"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
